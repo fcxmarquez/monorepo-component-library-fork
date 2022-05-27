@@ -1,0 +1,22 @@
+{
+  "packages": ["components/*"],
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "version": {
+      "changelogPreset": "conventional-changelog-angular",
+      "conventionalCommits": true,
+      "allowBranch": ["master", "release/*"]
+    },
+    "publish": {
+      "ignoreChanges": [
+        "ignored-file",
+        "**/__fixtures__/**",
+        "**/__tests__/**",
+        "*.spec.tsx",
+        "*.stories.tsx"
+      ],
+      "message": "chore(release): publish"
+    }
+  }
+}
